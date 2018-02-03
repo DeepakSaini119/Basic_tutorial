@@ -13,7 +13,7 @@ vec1 = vect(1,2)
 vec2 = vect(3,4)
 
 
-
+#Importing functions from other python files.
 from arguments import get_options
 opts = get_options()
 print "Infile specified : ",opts.in_file
@@ -23,15 +23,14 @@ import pandas as pd
 from pandas import DataFrame as df
 
 cur_df = df.from_csv('test2.csv, idy, idy')
-
-
 cur2_df = df.from_csv('test3.csv')
-
 cur3_df = cur_df.join(cur2_df,lsuffix='_initial')
 
 #ipdb
 import ipdb
-ipdb.set_trace()
+#Uncomment to set a checkpoint
+#running with a checkpoint set automatically opens up ipdb. Can use commands like step, continue and locals() for debugging.
+#ipdb.set_trace()
 
 #plotting
 from matplotlib import pyplot as plt
@@ -41,8 +40,4 @@ az = [1,2,3,4,5]
 
 plt.scatter(ax, ay)
 plt.plot(ax,az,'r')
-# plt.plot(ax,ay)
-
 plt.show()
-
-#Do's and Don'ts (Well don't mostly)
